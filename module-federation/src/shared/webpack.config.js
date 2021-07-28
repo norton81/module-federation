@@ -9,7 +9,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: "shell",
+    uniqueName: "mfe1",
     publicPath: "auto"
   },
   optimization: {
@@ -24,17 +24,17 @@ module.exports = {
     new ModuleFederationPlugin({
 
       // For remotes (please adjust)
-      name: "shell",
+      name: "shared",
       filename: "remoteEntry.js",
-      // exposes: {
-      //     './Component': './projects/shell/src/app/app.component.ts',
-      // },
+      exposes: {
+        './Module': './src/shared/app/library/library.module.ts',
+      },
 
       // For hosts (please adjust)
-      remotes: {
-        "shared": "shared@http://localhost:7000/remoteEntry.js",
+      // remotes: {
+      //     "shell": "shell@http://localhost:5000/remoteEntry.js",
 
-      },
+      // },
 
       shared: {
         "@angular/core": { singleton: true, strictVersion: true },

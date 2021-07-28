@@ -64,9 +64,11 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
-            "browserTarget": "shell:build"
+            "browserTarget": "shell:build",
+            "extraWebpackConfig": "src/shell/webpack.config.js",
+            "port": 7001
           },
           "configurations": {
             "production": {
@@ -152,7 +154,8 @@
             "styles": [
               "src/shared/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "extraWebpackConfig": "src/shared/webpack.config.js"
           },
           "configurations": {
             "production": {
@@ -185,9 +188,11 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
-            "browserTarget": "shared:build"
+            "browserTarget": "shared:build",
+            "extraWebpackConfig": "src/shared/webpack.config.js",
+            "port": 7000
           },
           "configurations": {
             "production": {
