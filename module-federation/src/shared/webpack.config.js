@@ -9,7 +9,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: "mfe1",
+    uniqueName: "shared",
     publicPath: "auto"
   },
   optimization: {
@@ -28,6 +28,8 @@ module.exports = {
       filename: "remoteEntry.js",
       exposes: {
         './Module': './src/shared/app/library/library.module.ts',
+        './External': './src/shared/app/library/components/external/external.component.ts',
+        './Picture': './src/shared/app/library/components/picture/picture.component.ts',
       },
 
       // For hosts (please adjust)

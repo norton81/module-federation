@@ -3,7 +3,7 @@ import {PictureComponent} from './components/picture/picture.component';
 
 export const LIBRARY_ROUTES: Routes = [
   {
-    path: 'library',
+    path: 'library-components',
     component: PictureComponent
   }
 ];

@@ -33,7 +33,6 @@ module.exports = {
       // For hosts (please adjust)
       remotes: {
         "shared": "shared@http://localhost:7000/remoteEntry.js",
-
       },
 
       shared: {
